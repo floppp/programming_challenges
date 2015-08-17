@@ -1,5 +1,5 @@
 from sys import path
-path.append("../lib")
+path.append("../libPython")
 from sieve_eratosthenes import sieve
 from sieve_eratosthenes import wrapper
 from timeit import timeit
