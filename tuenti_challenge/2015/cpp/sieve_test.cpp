@@ -9,7 +9,7 @@ using std::cout;  using std::endl;
 int main()
 {
   uint32_t L = 1;
-  uint32_t R = 1000000;
+  uint32_t R = 200;
   uint32_t I = 25;
 
   std::vector<uint32_t> primes = primes::segmented_sieve(L, R);
