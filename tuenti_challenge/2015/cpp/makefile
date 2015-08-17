@@ -6,9 +6,9 @@ VPATH = sources/:headers/
 
 $(TARGET): sieve_test.cpp primes.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
-	
+
 primes.o: primes.cpp
 	$(CXX) $(CXXFLAGS) -c $^
 
-clean:	
+clean:
 	rm -f $(TARGET) *.o

@@ -4,10 +4,14 @@ using std::cout;  using std::endl;
 
 namespace primes
 {
+  // USING MAP INSTEAD OF VECTOR<BOOL> OR SOMETHING LIKE THAT IT'S TOO MUCH
+  // EXPENSIVE. I NEED TO CHANGE THIS.
   std::map<uint32_t, bool> create_map(uint32_t const L, uint32_t const R)
   {
     std::map<uint32_t, bool> map;
-    for (uint32_t i = L; i < R; ++i)
+    uint32_t aux = (L == 1) ? 3 : L;
+
+    for (uint32_t i = aux; i < R; ++i)
     {
       if (i%2 != 0)
         map.insert(std::pair<uint32_t, bool>(i, true));
@@ -28,9 +32,6 @@ namespace primes
 
     if (v.size() == 0)
     {
-      if (it->first == 1)
-        ++it;
-
       for (; it->first < limit; ++it)
       {
         if (it->second)
@@ -44,10 +45,9 @@ namespace primes
     {
       typedef std::vector<uint32_t>::iterator v_iter;
 
-      // Avoiding 1
       v_iter iter = v.begin();
-      ++iter;
 
+      cout << "Iteration" << endl;
       // Taking the last prime we probe in the last segmentation. An optimal way could be tracing
       // this index in a variable per reference, and using that index for taking the last prime used.
       // Easy to implement (i think)
@@ -83,11 +83,12 @@ namespace primes
         sieve_erat(idx, idx+I, result);
         idx += I;
       }
-      // Adding the 2. Ugly, but easiest way.
-      std::vector<uint32_t>::iterator it = result.begin();
-      ++it;
-      result.insert(it, 2);
     }
+
+    // Adding the 2. Ugly, but easiest way.
+    std::vector<uint32_t>::iterator it = result.begin();
+    result.insert(it, 2);
+
     return result;
   }
 }
