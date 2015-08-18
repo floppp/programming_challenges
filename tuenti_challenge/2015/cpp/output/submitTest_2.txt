@@ -1,0 +1,18 @@
+Calculating primes between 1 and 9999999
+		number of primes: 664579
+1906107
+Calculating primes between 7 and 1000000
+		number of primes: 78498
+210053
+Calculating primes between 50 and 10000
+		number of primes: 1229
+2608
+Calculating primes between 1337 and 133700
+		number of primes: 12473
+30436
+Calculating primes between 5000 and 5000000
+		number of primes: 348513
+978373
+Calculating primes between 30000 and 40000
+		number of primes: 4203
+2329

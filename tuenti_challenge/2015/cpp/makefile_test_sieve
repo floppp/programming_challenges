@@ -1,11 +1,10 @@
 CXX = g++
 CXXFLAGS = --std=c++11 -Isources/ -Iheaders/
 
-TARGET = problem_2
-BUIDIR = obj/
+TARGET = sieve
 VPATH = sources/:headers/
 
-$(TARGET):	problem_2.cpp primes.o
+$(TARGET): sieve_test.cpp primes.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 primes.o: primes.cpp
