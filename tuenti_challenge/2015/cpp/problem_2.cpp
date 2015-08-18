@@ -25,12 +25,14 @@ int main()
   while (cin >> pairs.first >> pairs.second)
     extremes.insert(pairs);
 
-  for (std::pair<uint32_t, uint32_t> pair: extremes)
-  {
-    cout << "Calculating primes between " << pair.first << " and " << pair.second << endl;
-    primes = primes::segmented_sieve(pair.first, pair.second);
-    // print_vector(primes);
-  }
+  // for (std::pair<uint32_t, uint32_t> pair: extremes)
+  // {
+  //   cout << "Calculating primes between " << pair.first << " and " << pair.second << endl;
+  //   primes = primes::segmented_sieve(pair.first, pair.second);
+  //   // print_vector(primes);
+  // }
+  primes = simple_sieve(100000, primes);
+  print_vector(primes);
 
 	return 0;
 }

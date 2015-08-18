@@ -4,8 +4,48 @@ using std::cout;  using std::endl;
 
 namespace primes
 {
-  // USING MAP INSTEAD OF VECTOR<BOOL> OR SOMETHING LIKE THAT IT'S TOO MUCH
-  // EXPENSIVE. I NEED TO CHANGE THIS.
+  // void simple_sieve(uint32_t const N, std::vector<uint32_t>& v)
+  std::vector<uint32_t> simple_sieve(uint32_t const N)
+  {
+    std::vector<uint32_t> v;
+    std::vector<bool> primes(N, true);
+    cout << primes.size() << endl;
+    uint32_t limit = (int) (std::sqrt(N) + 1);
+
+    for (uint32_t i = 3; i < limit; i += 2)
+      if (primes[i])
+        for (int j = i*i; j < N; j += i)
+          primes[j] = false;
+
+    v.push_back(2);
+    for (uint32_t i = 3; i < N; i += 2)
+    {
+      if (primes[i])
+      {
+        v.push_back(i);
+      }
+      // cout << endl;
+    }
+    return v;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   std::map<uint32_t, bool> create_map(uint32_t const L, uint32_t const R)
   {
     std::map<uint32_t, bool> map;
@@ -44,13 +84,8 @@ namespace primes
     } else
     {
       typedef std::vector<uint32_t>::iterator v_iter;
-
       v_iter iter = v.begin();
 
-      cout << "Iteration" << endl;
-      // Taking the last prime we probe in the last segmentation. An optimal way could be tracing
-      // this index in a variable per reference, and using that index for taking the last prime used.
-      // Easy to implement (i think)
       uint32_t idx = 1;
       for (; v[idx] < limit; idx++);
       --idx;
