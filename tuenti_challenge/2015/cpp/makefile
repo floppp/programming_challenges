@@ -1,11 +1,11 @@
 CXX = g++
 CXXFLAGS = --std=c++11 -Isources/ -Iheaders/
 
-TARGET = problem_2
+TARGET = challenge_3
 BUIDIR = obj/
 VPATH = sources/:headers/
 
-$(TARGET):	problem_2.cpp primes.o
+$(TARGET):	challenge_3.cpp primes.o
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
 primes.o: primes.cpp
