@@ -150,3 +150,92 @@ hs_err_pid*
 # Temporary data
 .ipynb_checkpoints/
 
+# Created by https://www.toptal.com/developers/gitignore/api/clojure,leiningen
+# Edit at https://www.toptal.com/developers/gitignore?templates=clojure,leiningen
+
+### Clojure ###
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/lib/
+/classes/
+/target/
+/checkouts/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.nrepl-port
+.cpcache/
+
+### Leiningen ###
+
+# End of https://www.toptal.com/developers/gitignore/api/clojure,leiningen
+
+
+# Created by https://www.toptal.com/developers/gitignore/api/emacs,scala,metals
+# Edit at https://www.toptal.com/developers/gitignore?templates=emacs,scala,metals
+
+### Emacs ###
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+*_flymake.*
+
+# eshell files
+/eshell/history
+/eshell/lastdir
+
+# elpa packages
+/elpa/
+
+# reftex files
+*.rel
+
+# AUCTeX auto folder
+/auto/
+
+# cask packages
+.cask/
+dist/
+
+# Flycheck
+flycheck_*.el
+
+# server auth directory
+/server/
+
+# projectiles files
+.projectile
+
+# directory configuration
+.dir-locals.el
+
+# network security
+/network-security.data
+
+
+### Metals ###
+.metals/
+.bloop/
+project/**/metals.sbt
+
+### Scala ###
+*.class
+*.log
+
+# End of https://www.toptal.com/developers/gitignore/api/emacs,scala,metals
+

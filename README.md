@@ -4,3 +4,5 @@ Code storage from some of the multiples programming challenges that exists:
 - project-euler: http://www.projecteuler.net
 - tuenti challenges: https://contest.tuenti.net
 - codingbat: http://codingbat.com/java
+- leetcode: http://leetcode.com
+- codewars: http://www.codewar.com
