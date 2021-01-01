@@ -239,3 +239,4 @@ project/**/metals.sbt
 
 # End of https://www.toptal.com/developers/gitignore/api/emacs,scala,metals
 
+.DS_Store
